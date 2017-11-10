@@ -43,7 +43,11 @@ public class ClassUtil {
 		if(clazz.equals(Double.class))
 			return Double.parseDouble(value.toString());
 		if(clazz.equals(Long.class))
-			return Long.parseLong(value.toString());
+			try {
+				return Long.parseLong(value.toString());
+			} catch (NumberFormatException e) {
+				return Long.parseUnsignedLong(value.toString());
+			}
 		if(clazz.equals(Float.class))
 			return Float.parseFloat(value.toString());
 		if(clazz.equals(Integer.class))

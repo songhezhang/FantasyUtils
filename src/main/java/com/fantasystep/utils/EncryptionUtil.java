@@ -5,6 +5,7 @@ import java.security.NoSuchAlgorithmException;
 
 import sun.misc.BASE64Encoder;
 
+@SuppressWarnings("restriction")
 public class EncryptionUtil {
 
 	public final static String SHA1_PREFIX = "{SHA1}";
