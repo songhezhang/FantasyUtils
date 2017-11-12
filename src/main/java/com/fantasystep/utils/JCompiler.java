@@ -220,7 +220,7 @@ public class JCompiler {
 				StringBuilder currentPath = new StringBuilder(this.getClass()
 						.getClassLoader().getResource("").getPath());
 				logger.info(currentPath + "../lib");
-				File dir = new File(currentPath + "../lib");
+				File dir = new File(currentPath + "../../applications/persistence-1.0.0/WEB-INF/lib");
 				if (dir.listFiles() != null)
 					for (File f : dir.listFiles())
 						currentPath.append(d).append(f.getAbsolutePath());
